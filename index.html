@@ -39,26 +39,10 @@
             }
         }
     </script>
-    <style>
-        .hero-bg-cover {
-            background-color: #ffffff;
-            background-image: linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)), url('./hero-bg.png');
-            background-repeat: no-repeat;
-            background-position: right 10% center;
-            background-size: 650px auto;
-        }
-        @media (max-width: 768px) {
-            .hero-bg-cover {
-                background-position: center bottom;
-                background-size: 380px auto;
-                background-image: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)), url('./hero-bg.png');
-            }
-        }
-    </style>
 </head>
 <body class="bg-fuel-canvas text-fuel-slate font-sans antialiased selection:bg-fuel-amber selection:text-white">
 
-    <!-- 1. KOPFZEILE MIT DEM BUNTEN LOGO -->
+    <!-- 1. KOPFZEILE MIT DEM RUNDEN LOGO -->
     <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-fuel-border">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             
@@ -88,6 +72,7 @@
                 </a>
             </nav>
 
+            <!-- Mobil-Button -->
             <button id="mobileMenuBtn" class="md:hidden text-fuel-black p-2 focus:outline-none" aria-label="Menü">
                 <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -95,6 +80,7 @@
             </button>
         </div>
 
+        <!-- Mobile Menü -->
         <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-fuel-border px-6 py-6 font-heading text-xl uppercase tracking-wider space-y-4">
             <a href="#band" class="block hover:text-fuel-amber py-1">Die Band</a>
             <a href="#repertoire" class="block hover:text-fuel-amber py-1">Setliste</a>
@@ -103,32 +89,48 @@
         </div>
     </header>
 
-    <!-- 2. HERO-BEREICH ALS ECHTER CSS-HINTERGRUND -->
-    <section class="hero-bg-cover py-24 md:py-36 border-b border-fuel-border">
+    <!-- 2. HERO-BEREICH: TEXT LINKS, BUNTES LOGO RECHTS -->
+    <section class="py-16 md:py-24 border-b border-fuel-border bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-2xl space-y-6">
-                <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-fuel-amber/30 bg-orange-50/70 text-fuel-darkamber text-sm font-heading font-semibold tracking-widest uppercase">
-                    <span class="w-2 h-2 rounded-full bg-fuel-amber animate-pulse"></span>
-                    100 % Handgemacht &bull; 0 % Ballast
-                </div>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
                 
-                <h1 class="font-heading text-5xl sm:text-6xl md:text-7xl font-bold uppercase tracking-tight text-fuel-black leading-[0.95]">
-                    Acoustic Powered<br>
-                    <span class="text-fuel-amber">Cover Rock.</span>
-                </h1>
-                
-                <p class="text-lg sm:text-xl text-gray-700 font-normal leading-relaxed">
-                    Klassiker von den 60ern bis in die 90er. Kein synthetischer Schnickschnack: Zwei Akustikgitarren, treibender Bass, Blues-Harp und pure Drum-Grooves. Echter Kraftstoff für jede Bühne.
-                </p>
+                <!-- Links: Text & Call-to-Action -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-fuel-amber/30 bg-orange-50/70 text-fuel-darkamber text-sm font-heading font-semibold tracking-widest uppercase">
+                        <span class="w-2 h-2 rounded-full bg-fuel-amber animate-pulse"></span>
+                        100 % Handgemacht &bull; 0 % Ballast
+                    </div>
+                    
+                    <h1 class="font-heading text-5xl sm:text-6xl md:text-7xl font-bold uppercase tracking-tight text-fuel-black leading-[0.95]">
+                        Acoustic Powered<br>
+                        <span class="text-fuel-amber">Cover Rock.</span>
+                    </h1>
+                    
+                    <p class="text-lg sm:text-xl text-gray-700 font-normal leading-relaxed max-w-xl">
+                        Klassiker von den 60ern bis in die 90er. Kein synthetischer Schnickschnack: Zwei Akustikgitarren, treibender Bass, Blues-Harp und pure Drum-Grooves. Echter Kraftstoff für jede Bühne.
+                    </p>
 
-                <div class="flex flex-wrap items-center gap-4 pt-4">
-                    <a href="#booking" class="px-7 py-3.5 rounded-lg bg-fuel-black hover:bg-fuel-amber text-white font-heading text-lg uppercase tracking-wider font-semibold transition shadow-md hover:shadow-lg">
-                        Jetzt für Event anfragen
-                    </a>
-                    <a href="#repertoire" class="px-7 py-3.5 rounded-lg border-2 border-gray-300 hover:border-fuel-black text-fuel-black font-heading text-lg uppercase tracking-wider font-semibold transition bg-white/80">
-                        Setliste ansehen
-                    </a>
+                    <div class="flex flex-wrap items-center gap-4 pt-2">
+                        <a href="#booking" class="px-7 py-3.5 rounded-lg bg-fuel-black hover:bg-fuel-amber text-white font-heading text-lg uppercase tracking-wider font-semibold transition shadow-md hover:shadow-lg">
+                            Jetzt für Event anfragen
+                        </a>
+                        <a href="#repertoire" class="px-7 py-3.5 rounded-lg border-2 border-gray-300 hover:border-fuel-black text-fuel-black font-heading text-lg uppercase tracking-wider font-semibold transition">
+                            Setliste ansehen
+                        </a>
+                    </div>
                 </div>
+
+                <!-- Rechts: Das bunte Logo als eigenständiges Bild -->
+                <div class="lg:col-span-5 flex justify-center items-center">
+                    <div class="w-full max-w-md p-4">
+                        <img 
+                            src="./hero-bg-2.png" 
+                            alt="Acoustic Fuel Motiv" 
+                            class="w-full h-auto object-contain mix-blend-multiply drop-shadow-sm"
+                        >
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
